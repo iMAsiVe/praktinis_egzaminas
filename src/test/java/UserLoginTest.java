@@ -1,6 +1,7 @@
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -39,8 +40,8 @@ public class UserLoginTest {
 		assertThat(logInPage.wrongUserMessage(), containsString(Constants.WRONG_LOGIN_MESSAGE));
 	}
 
-//	@AfterClass
-//	public static void closeObjects() {
-//		driver.close();
-//	}
+	@AfterClass
+	public static void closeObjects() {
+		driver.close();
+	}
 }

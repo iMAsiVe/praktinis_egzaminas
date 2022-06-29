@@ -1,5 +1,6 @@
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -31,8 +32,8 @@ public class LogoutTest {
 		assertThat(logInPage.logoutCheckText(Constants.LOGIN_TEXT));
 	}
 
-//	@AfterClass
-//	public static void closeObjects() {
-//		driver.close();
-//	}
+	@AfterClass
+	public static void closeObjects() {
+		driver.close();
+	}
 }
